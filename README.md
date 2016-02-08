@@ -42,6 +42,11 @@ found 49 jpgs
 - [`tumblr_client`](https://github.com/tumblr/tumblr_client)
 - [giphy](http://gph.is/19776Kk)
 
+## Alternatives
+
+- [miohtama/tumblr-upload](https://github.com/miohtama/tumblr-upload/) `python`
+- [bfred-it/tumblr-upload](https://github.com/bfred-it/tumblr-upload) `node` `js`
+
 ## Contact
 
 - [github.com/dkhamsing](https://github.com/dkhamsing)
