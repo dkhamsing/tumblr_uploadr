@@ -8,8 +8,8 @@ CLI to upload photos in batch to your Tumblr :panda_face:
 
 ```shell
 $ git clone https://github.com/dkhamsing/tumblr_uploadr.git
-$ cd tumblr_uploadr/lib/
-$ ruby tumblr_uploadr.rb # 💰
+$ cd tumblr_uploadr/
+$ rake install # 💰
 ```
 
 ### Credentials
@@ -48,12 +48,12 @@ tumblr_uploadr <tumblr> <folder> [caption]
 ### Examples
 
 ```shell
-$ ruby tumblr_uploadr.rb dkhamsing-travel tokyo16/ 'Tokyo 2016'
+$ tumblr_uploadr dkhamsing-travel tokyo16/ 'Tokyo 2016'
 ```
 
 ```shell
 # no caption
-$ ruby tumblr_uploadr.rb dkhamsing photos/
+$ tumblr_uploadr dkhamsing photos/
 
 uploadr 0.1.0
 writing log to tumblr_log

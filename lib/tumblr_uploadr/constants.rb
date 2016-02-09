@@ -7,6 +7,7 @@ module TumblrUploadr
 
   PRODUCT = 'tumblr_uploadr'
   PRODUCT_DESCRIPTION = 'batch uploading to tumblr (drafts)'
+  PRODUCT_URL = 'https://github.com/dkhamsing/tumblr_uploadr'
 
   CONSUMER_KEY = 'your-consumer-key'
   CONSUMER_SECRET = 'your-consumer-secret'
