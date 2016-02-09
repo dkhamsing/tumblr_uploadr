@@ -6,10 +6,13 @@ require 'fileutils'
 
 module TumblrUploadr
   class << self
-    def get_jpg_assets(dir)
+    def get_images(dir)
       dir += '/' unless dir.include? '/'
       glob = Dir.glob "#{dir}**/*"
-      glob.select { |x| x.downcase.include? 'jpg' }
+      glob.select do |x|
+        f = x.downcase
+        (f.include? 'jpg') || (f.include? 'jpeg') || (f.include? 'png')
+      end
     end
   end
 
@@ -31,9 +34,9 @@ module TumblrUploadr
   caption = ARGV[2]
   caption = '' if caption.nil?
 
-  jpgs = get_jpg_assets folder
-  count = jpgs.count
-  puts "found #{count} jpgs"
+  images = get_images folder
+  count = images.count
+  puts "found #{count} images"
 
   Tumblr.configure do |config|
     config.consumer_key = CONSUMER_KEY
@@ -49,7 +52,7 @@ module TumblrUploadr
     exit 1
   end
 
-  jpgs.each_with_index do |j, i|
+  images.each_with_index do |j, i|
     d = Time.now.strftime("%d/%m/%Y %H:%M")
     puts "#{i+1}/#{count} uploading #{j} ..."
 
