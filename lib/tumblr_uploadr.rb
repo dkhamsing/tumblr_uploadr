@@ -67,6 +67,6 @@ module TumblrUploadr
       exit 1
     end
 
-    sleep 1
+    sleep PAUSE
   end
 end

@@ -2,6 +2,7 @@ module TumblrUploadr
   VERSION = '0.1.0'
 
   LOG = 'tumblr_log'
+  PAUSE = 1
 
   PRODUCT = 'tumblr_uploadr'
   PRODUCT_DESCRIPTION = 'batch uploading to tumblr (drafts)'
