@@ -12,7 +12,7 @@ $ cd tumblr_uploadr/lib/
 $ ruby tumblr_uploadr.rb # 💰
 ```
 
-Enter your credentials in `tumblr_uploadr.rb`.
+Enter your credentials in `tumblr_uploadr/constants.rb`.
 
 ## Usage
 
