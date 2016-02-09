@@ -20,7 +20,6 @@ module TumblrUploadr
       puts "uploadr #{VERSION}"
 
       path = File.join ENV['HOME'], '.tumblr'
-
       if File.exist?(path)
         configuration = YAML.load_file path
         Tumblr.configure do |config|
@@ -54,7 +53,7 @@ module TumblrUploadr
       puts "found #{count} images"
 
       begin
-        client = client = Tumblr::Client.new
+        client = Tumblr::Client.new
       rescue => e
         puts "client error: exception #{e}"
         exit 1
