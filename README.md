@@ -12,13 +12,11 @@ $ git clone https://github.com/dkhamsing/tumblr_uploadr.git
 
 ## Usage
 
-`tumblr_uploadr` sends photos to your Tumblr drafts from the command line.
-
 ```
 tumblr_uploadr <tumblr> <folder> [caption]
 ```
 
-`caption` is optional.
+`tumblr_uploadr` sends photos to your Tumblr drafts from the command line, `caption` is optional.
 
 ### Examples
 
@@ -27,7 +25,7 @@ $ ruby tumblr_uploadr dkhamsing-travel tokyo16/ 'Tokyo 2016'
 ```
 
 ```shell
-$ ruby tumblr_uploadr dkhamsing photos/
+$ ruby tumblr_uploadr dkhamsing photos/ # no captions
 
 uploadr 0.1.0
 writing log to tumblr_log
