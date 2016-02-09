@@ -12,7 +12,30 @@ $ cd tumblr_uploadr/lib/
 $ ruby tumblr_uploadr.rb # 💰
 ```
 
+### Credentials
+
 Enter your credentials in `tumblr_uploadr/constants.rb`.
+
+One way to obtain the credentials is using the [`tumblr_client`](https://github.com/tumblr/tumblr_client) console tool. After running it, your information will be in a `.tumblr` file of your home directory.
+
+```shell
+$ tumblr
+Register an application at: http://www.tumblr.com/oauth/apps
+OAuth Consumer key: <consumer key>
+OAuth Consumer secret: <consumer secret>
+
+http://www.tumblr.com/oauth/authorize?oauth_token=<token>
+Post-redirect, copy the oauth_verifier
+OAuth Verifier: <verifier>
+
+        .                                 .o8       oooo
+      .o8                                "888       `888
+    .o888oo oooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b
+      888   `888  `888  `888P"Y88bP"Y88b  d88' `88b  888  `888""8P
+      888    888   888   888   888   888  888   888  888   888
+      888 .  888   888   888   888   888  888   888  888   888    .o.
+      "888"  `V88V"V8P' o888o o888o o888o `Y8bod8P' o888o d888b   Y8P
+```
 
 ## Usage
 
