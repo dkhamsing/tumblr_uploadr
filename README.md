@@ -12,6 +12,8 @@ $ cd tumblr_uploadr/lib/
 $ ruby tumblr_uploadr # 🎉 
 ```
 
+Enter your credentials in `tumblr_uploadr.rb`.
+
 ## Usage
 
 ```
