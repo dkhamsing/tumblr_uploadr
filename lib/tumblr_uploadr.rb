@@ -18,7 +18,7 @@ module TumblrUploadr
 
   puts "uploadr #{VERSION}"
 
-  if ARGV.count == 0
+  if ARGV.count < 2
     puts "usage: #{PRODUCT} <tumblr> <folder> [caption]"
     exit 1
   end
