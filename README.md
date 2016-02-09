@@ -9,7 +9,7 @@ CLI to upload photos in batch to your Tumblr :panda_face:
 ```shell
 $ git clone https://github.com/dkhamsing/tumblr_uploadr.git
 $ cd tumblr_uploadr/
-$ rake install # 💰
+$ rake install
 ```
 
 ### Credentials
