@@ -59,10 +59,10 @@ module TumblrUploadr
         exit 1
       end
 
-      images.each_with_index do |j, i|
-        d = Time.now.strftime("%d/%m/%Y %H:%M")
+      images.each_with_index do |j, i|        
         puts "#{i+1}/#{count} uploading #{j} ..."
 
+        d = Time.now.strftime("%d/%m/%Y %H:%M")
         File.write LOG, "#{j} to #{tumblr} #{d} \n"
 
         payload = {
