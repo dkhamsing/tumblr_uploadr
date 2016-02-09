@@ -14,9 +14,7 @@ $ rake install # 💰
 
 ### Credentials
 
-Enter your credentials in `tumblr_uploadr/constants.rb`.
-
-One way to obtain the credentials is using the [`tumblr_client`](https://github.com/tumblr/tumblr_client) console tool. After running it, your information will be in a `.tumblr` file of your home directory.
+`tumblr_uploadr` requires credentials stored in a `.tumblr` file. Use the [`tumblr_client`](https://github.com/tumblr/tumblr_client) console tool to generate it.
 
 ```shell
 $ tumblr

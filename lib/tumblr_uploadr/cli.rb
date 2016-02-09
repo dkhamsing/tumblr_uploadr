@@ -1,8 +1,10 @@
 # tumblr_uploadr command line interface
 module TumblrUploadr
   require 'tumblr_uploadr/constants'
-  require 'tumblr_client'
+
   require 'fileutils'
+  require 'tumblr_client'
+  require 'yaml'
 
   class << self
     def get_images(dir)
@@ -16,6 +18,20 @@ module TumblrUploadr
 
     def cli
       puts "uploadr #{VERSION}"
+
+      path = File.join ENV['HOME'], '.tumblr'
+
+      if File.exist?(path)
+        configuration = YAML.load_file path
+        Tumblr.configure do |config|
+          Tumblr::Config::VALID_OPTIONS_KEYS.each do |key|
+            config.send(:"#{key}=", configuration[key.to_s])
+          end
+        end
+      else
+        puts "error: missing .tumblr file, see #{PRODUCT_URL}"
+        exit 1
+      end
 
       if ARGV.count < 2
         puts "usage: #{PRODUCT} <tumblr> <folder> [caption]"
@@ -36,13 +52,6 @@ module TumblrUploadr
       images = get_images folder
       count = images.count
       puts "found #{count} images"
-
-      Tumblr.configure do |config|
-        config.consumer_key = CONSUMER_KEY
-        config.consumer_secret = CONSUMER_SECRET
-        config.oauth_token = ACCESS_TOKEN
-        config.oauth_token_secret = ACCESS_SECRET
-      end
 
       begin
         client = client = Tumblr::Client.new
