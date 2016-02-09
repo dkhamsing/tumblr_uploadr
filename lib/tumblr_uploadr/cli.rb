@@ -1,3 +1,4 @@
+# tumblr_uploadr command line interface
 module TumblrUploadr
   require 'tumblr_uploadr/constants'
   require 'tumblr_client'
@@ -72,4 +73,4 @@ module TumblrUploadr
       end
     end #def
   end # class
-end
+end # module

@@ -1,3 +1,4 @@
+# project contants
 module TumblrUploadr
   VERSION = '0.1.0'
 
