@@ -41,7 +41,7 @@ OAuth Verifier: <verifier>
 tumblr_uploadr <tumblr> <folder> [caption]
 ```
 
-`tumblr_uploadr` sends photos to your Tumblr drafts from the command line, `caption` is optional.
+`tumblr_uploadr` posts photos as drafts your Tumblr from the command line, `caption` is optional.
 
 ### Examples
 
