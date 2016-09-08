@@ -39,7 +39,7 @@ module TumblrUploadr
 
       puts "writing log to #{LOG}"
 
-      tumblr = ARGV[0]
+      tumblr = ARGV[0].sub('/', '')
       tumblr = "#{tumblr}.tumblr.com" unless tumblr.include? '.'
 
       folder = ARGV[1]
@@ -59,7 +59,7 @@ module TumblrUploadr
         exit 1
       end
 
-      images.each_with_index do |j, i|        
+      images.each_with_index do |j, i|
         puts "#{i+1}/#{count} uploading #{j} ..."
 
         d = Time.now.strftime("%d/%m/%Y %H:%M")
